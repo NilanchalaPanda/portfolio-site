@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Oneko } from "@/components/Oneko";
 import { profile } from "@/data/profile";
 
 const geistSans = Geist({
@@ -64,10 +65,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-neutral-50 dark:bg-[#09090b] text-neutral-900 dark:text-neutral-100 font-sans selection:bg-blue-600 selection:text-white transition-colors duration-200">
+      <body className="min-h-full flex flex-col bg-neutral-50 dark:bg-[#0c0c0e] text-neutral-900 dark:text-neutral-100 font-sans selection:bg-blue-600 selection:text-white transition-colors duration-200">
         <ThemeProvider>
+          {/* Walking pixel cat from ramx.in */}
+          <Oneko />
           <Header />
-          <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <main className="flex-1 max-w-2xl w-full mx-auto px-4 py-8 sm:py-12">
             {children}
           </main>
           <Footer />
